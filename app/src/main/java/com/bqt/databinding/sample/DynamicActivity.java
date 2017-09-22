@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.app.Activity;
 import com.bqt.databinding.R;
 import com.bqt.databinding.databinding.ActivityDynamicBinding;
 import com.bqt.databinding.databinding.UserItemBinding;
@@ -18,7 +19,7 @@ import com.bqt.databinding.utils.Randoms;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DynamicActivity extends BaseActivity {
+public class DynamicActivity extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

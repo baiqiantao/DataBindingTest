@@ -5,13 +5,14 @@ import android.databinding.ObservableArrayMap;
 import android.os.Bundle;
 import android.view.View;
 
+import android.app.Activity;
 import com.bqt.databinding.R;
 import com.bqt.databinding.databinding.ActivityObservableBinding;
 import com.bqt.databinding.model.ObservableUser;
 import com.bqt.databinding.model.PlainUser;
 
 
-public class ObservableActivity extends BaseActivity {
+public class ObservableActivity extends Activity {
 
     private ObservableUser user = new ObservableUser();
     private PlainUser plainUser = new PlainUser();
@@ -45,15 +46,15 @@ public class ObservableActivity extends BaseActivity {
     }
 
     public void setMyName(View view) {
-        user.setFirstName("liang");
-        user.setLastName("fei");
+        user.setFirstName("包");
+        user.setLastName("青天");
 
-        plainUser.firstName.set("liang");
-        plainUser.lastName.set("fei");
+        plainUser.firstName.set("包");
+        plainUser.lastName.set("青天");
         plainUser.age.set(27);
 
-        mapUser.put("firstName", "liang");
-        mapUser.put("lastName", "fei");
+        mapUser.put("firstName", "包");
+        mapUser.put("lastName", "青天");
         mapUser.put("age", 27);
     }
 }

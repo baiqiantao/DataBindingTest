@@ -4,6 +4,7 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.util.SparseArray;
 
+import android.app.Activity;
 import com.bqt.databinding.R;
 import com.bqt.databinding.databinding.CollectionsBinding;
 
@@ -12,7 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CollectionActivity extends BaseActivity {
+public class CollectionActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +21,7 @@ public class CollectionActivity extends BaseActivity {
         CollectionsBinding binding = DataBindingUtil.setContentView(
                 this, R.layout.activity_collection);
 
-        String[] literals = new String[]{"liang", "fei"};
+        String[] literals = new String[]{"包", "青天"};
 
         List<String> list = new ArrayList<>();
         SparseArray<String> sparse = new SparseArray<>(2);
@@ -34,8 +35,8 @@ public class CollectionActivity extends BaseActivity {
         }
 
         Map<String, String> map = new HashMap<>();
-        map.put(key, "liang");
-        map.put("lastName", "fei");
+        map.put(key, "包");
+        map.put("lastName", "青天");
 
         binding.setIndex(index);
         binding.setKey(key);

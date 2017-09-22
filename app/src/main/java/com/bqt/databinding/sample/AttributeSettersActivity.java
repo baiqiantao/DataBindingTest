@@ -1,5 +1,6 @@
 package com.bqt.databinding.sample;
 
+import android.app.Activity;
 import android.databinding.BindingAdapter;
 import android.databinding.DataBindingUtil;
 import android.graphics.drawable.Drawable;
@@ -9,13 +10,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.bqt.databinding.App;
 import com.bqt.databinding.R;
 import com.bqt.databinding.databinding.ActivityAttributeSettersBinding;
 import com.bqt.databinding.utils.Randoms;
 import com.squareup.picasso.Picasso;
 
-public class AttributeSettersActivity extends BaseActivity {
+public class AttributeSettersActivity extends Activity {
     private ActivityAttributeSettersBinding mBinding;
 
     public View.OnClickListener avatarClickListener = new View.OnClickListener() {
@@ -37,7 +37,7 @@ public class AttributeSettersActivity extends BaseActivity {
 
     @BindingAdapter({"imageUrl", "error"})
     public static void loadImage(ImageView view, String url, Drawable error) {
-        Log.d(App.TAG, "load image");
+        Log.d("bqt", "load image");
         Picasso.with(view.getContext()).load(url).error(error).into(view);
     }
 }

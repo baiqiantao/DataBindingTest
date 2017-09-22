@@ -7,12 +7,13 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Toast;
 
+import android.app.Activity;
 import com.bqt.databinding.OkListener;
 import com.bqt.databinding.R;
 import com.bqt.databinding.databinding.ActivityIncludeBinding;
 import com.bqt.databinding.model.User;
 
-public class IncludeActivity extends BaseActivity implements OkListener {
+public class IncludeActivity extends Activity implements OkListener {
 
     private ActivityIncludeBinding binding;
 
@@ -34,7 +35,7 @@ public class IncludeActivity extends BaseActivity implements OkListener {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                User user = new User(s.toString(), "Liang");
+                User user = new User(s.toString(), "包");
 
                 binding.setUser(user);
             }

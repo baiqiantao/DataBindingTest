@@ -5,13 +5,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewStub;
 
+import android.app.Activity;
 import com.bqt.databinding.R;
 import com.bqt.databinding.databinding.ActivityViewStubBinding;
 import com.bqt.databinding.databinding.ViewStubBinding;
 import com.bqt.databinding.model.User;
 
 
-public class ViewStubActivity extends BaseActivity {
+public class ViewStubActivity extends Activity {
     private ActivityViewStubBinding mBinding;
 
     @Override
@@ -23,7 +24,7 @@ public class ViewStubActivity extends BaseActivity {
             @Override
             public void onInflate(ViewStub stub, View inflated) {
                 ViewStubBinding binding = DataBindingUtil.bind(inflated);
-                User user = new User("liang", "fei");
+                User user = new User("包", "青天");
                 binding.setUser(user);
             }
         });

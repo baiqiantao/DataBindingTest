@@ -4,10 +4,11 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.view.View;
 
+import android.app.Activity;
 import com.bqt.databinding.R;
 import com.bqt.databinding.databinding.ActivityViewWithIdsBinding;
 
-public class ViewWithIDsActivity extends BaseActivity {
+public class ViewWithIDsActivity extends Activity {
 
     ActivityViewWithIdsBinding binding;
 
@@ -18,7 +19,7 @@ public class ViewWithIDsActivity extends BaseActivity {
     }
 
     public void showMyName(View view) {
-        binding.firstName.setText("liang");
-        binding.lastName.setText("fei");
+        binding.firstName.setText("包");
+        binding.lastName.setText("青天");
     }
 }

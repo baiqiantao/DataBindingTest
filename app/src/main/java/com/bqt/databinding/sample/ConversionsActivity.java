@@ -9,11 +9,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.app.Activity;
 import com.bqt.databinding.R;
 import com.bqt.databinding.databinding.ActivityConversionsBinding;
 import com.bqt.databinding.utils.ScreenUtils;
 
-public class ConversionsActivity extends BaseActivity {
+public class ConversionsActivity extends Activity {
 
     private ObservableBoolean mIsError = new ObservableBoolean();
 
