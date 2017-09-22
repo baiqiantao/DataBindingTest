@@ -5,18 +5,13 @@
 
         <variable
             name="user"
-            type="com.bqt.databinding.model.User" />
+            type="com.bqt.databinding.model.User"/>
     </data>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{user.firstName}" />
-    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{user.firstName}"/>
 
 </layout>

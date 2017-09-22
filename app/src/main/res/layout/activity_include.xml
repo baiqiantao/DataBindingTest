@@ -1,18 +1,19 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:bind="http://schemas.android.com/apk/res-auto">
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
 
     <data>
 
-        <import type="com.bqt.databinding.model.User" />
         <variable
             name="user"
-            type="User" />
+            type="com.bqt.databinding.model.User"/>
+
         <variable
             name="listener"
-            type="com.bqt.databinding.OkListener" />
+            type="com.bqt.databinding.OkListener"/>
+
         <variable
             name="okText"
-            type="String" />
+            type="String"/>
     </data>
 
     <LinearLayout
@@ -22,16 +23,16 @@
 
         <include
             android:id="@+id/layout_input"
-            layout="@layout/layout_input" />
+            layout="@layout/layout_input"/>
 
         <include
             layout="@layout/user"
-            bind:user="@{user}" />
+            bind:user="@{user}"/>
 
         <include
             layout="@layout/layout_btn_ok"
-            bind:okText="@{okText}"
-            bind:listener="@{listener}"/>
+            bind:listener="@{listener}"
+            bind:okText="@{okText}"/>
     </LinearLayout>
 </layout>
 
