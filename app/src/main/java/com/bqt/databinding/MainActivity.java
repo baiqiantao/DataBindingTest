@@ -31,12 +31,12 @@ public class MainActivity extends ListActivity {
 				"2、includes",
 				"3、Collections",
 				"4、Resources",
-				"5、Observable",
+				"5、Observable【】",
 				"6、View with IDs",
-				"7、ViewStubs",
-				"8、Dynamic Variables",
+				"7、ViewStubs【】",
+				"8、Dynamic Variables【】",
 				"9、Attribute Setters",
-				"10、Converters",};
+				"10、Converters【】",};
 		
 		setListAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, new ArrayList<>(Arrays.asList(array))));
 	}

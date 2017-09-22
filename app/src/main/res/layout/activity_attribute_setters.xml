@@ -22,10 +22,6 @@
         <com.bqt.databinding.NameCard
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_marginEnd="@dimen/largePadding"
-            android:layout_marginLeft="@dimen/largePadding"
-            android:layout_marginRight="@dimen/largePadding"
-            android:layout_marginStart="@dimen/largePadding"
             android:gravity="center"
             app:age="27"
             app:firstName="@{@string/firstName}"
