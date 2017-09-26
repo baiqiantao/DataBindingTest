@@ -7,11 +7,15 @@
 
         <variable
             name="activity"
-            type="AttributeSettersActivity"/>
+            type="AttributeSettersActivity"/><!--这个变量的类型就是当前Activity-->
 
         <variable
             name="imageUrl"
             type="String"/>
+
+        <variable
+            name="pt"
+            type="Integer"/>
     </data>
 
     <LinearLayout
@@ -21,18 +25,18 @@
 
         <com.bqt.databinding.NameCard
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:background="#300f"
+            android:paddingTop="@{pt}"
             app:age="27"
             app:firstName="@{@string/firstName}"
             app:lastName="@{@string/lastName}"/>
 
         <com.liangfeizc.avatarview.AvatarView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="300dp"
             app:error="@{@drawable/error}"
             app:imageUrl="@{imageUrl}"
-            app:onClickListener="@{activity.avatarClickListener}"/>
-
+            app:onClickListener="@{activity.mClickListener}"/>
     </LinearLayout>
 </layout>

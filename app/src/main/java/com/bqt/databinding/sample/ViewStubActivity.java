@@ -1,16 +1,15 @@
 package com.bqt.databinding.sample;
 
+import android.app.Activity;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewStub;
 
-import android.app.Activity;
 import com.bqt.databinding.R;
 import com.bqt.databinding.databinding.ActivityViewStubBinding;
-import com.bqt.databinding.databinding.ViewStubBinding;
+import com.bqt.databinding.databinding.MViewStubBinding;
 import com.bqt.databinding.model.User;
-
 
 public class ViewStubActivity extends Activity {
     private ActivityViewStubBinding mBinding;
@@ -20,10 +19,10 @@ public class ViewStubActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_view_stub);
-        mBinding.viewStub.setOnInflateListener(new ViewStub.OnInflateListener() {
+        mBinding.mViewStub.setOnInflateListener(new ViewStub.OnInflateListener() {
             @Override
             public void onInflate(ViewStub stub, View inflated) {
-                ViewStubBinding binding = DataBindingUtil.bind(inflated);
+                MViewStubBinding binding = DataBindingUtil.bind(inflated);
                 User user = new User("包", "青天");
                 binding.setUser(user);
             }
@@ -36,8 +35,8 @@ public class ViewStubActivity extends Activity {
      * Don't panic for red error reporting. Just ignore it and run the app. Surprise never ends.
      */
     public void inflateViewStub(View view) {
-        if (!mBinding.viewStub.isInflated()) {
-            mBinding.viewStub.getViewStub().inflate();
+        if (!mBinding.mViewStub.isInflated()) {
+            mBinding.mViewStub.getViewStub().inflate();
         }
     }
 }
