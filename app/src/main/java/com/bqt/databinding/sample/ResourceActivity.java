@@ -22,5 +22,6 @@ public class ResourceActivity extends Activity {
 		
 		binding.setBananaCount(100);
 		binding.setOrangeCount(2);
+		binding.executePendingBindings();
 	}
 }

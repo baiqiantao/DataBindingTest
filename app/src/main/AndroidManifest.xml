@@ -62,6 +62,10 @@
             android:name=".sample.ConversionsActivity"
             android:label="@string/title_activity_conversions">
         </activity>
+        <activity
+            android:name=".sample.BindEachOtherActivity"
+            android:label="BindEachOtherActivity">
+        </activity>
     </application>
 
 </manifest>

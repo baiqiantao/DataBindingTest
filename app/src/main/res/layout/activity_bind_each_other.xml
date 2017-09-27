@@ -1,0 +1,39 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.bqt.databinding.model.PlainUser"/>
+
+        <variable
+            name="user"
+            type="PlainUser"/>
+
+        <variable
+            name="user2"
+            type="PlainUser"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.name}"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={user2.name}"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="showUser"
+            android:text="显示User中的内容"/>
+    </LinearLayout>
+</layout>
+
+

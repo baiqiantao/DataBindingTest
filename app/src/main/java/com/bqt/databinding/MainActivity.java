@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.bqt.databinding.sample.BindEachOtherActivity;
 import com.bqt.databinding.sample.ConversionsActivity;
 import com.bqt.databinding.sample.DynamicActivity;
 import com.bqt.databinding.sample.ObservableActivity;
@@ -36,7 +37,8 @@ public class MainActivity extends ListActivity {
 				"7、ViewStubs",
 				"8、Dynamic Variables，RecyclerView",
 				"9、Attribute Setters",
-				"10、Converters",};
+				"10、Converters",
+				"11、双向绑定",};
 		
 		setListAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, new ArrayList<>(Arrays.asList(array))));
 	}
@@ -76,6 +78,9 @@ public class MainActivity extends ListActivity {
 				break;
 			case 10:
 				startActivity(new Intent(this, ConversionsActivity.class));
+				break;
+			case 11:
+				startActivity(new Intent(this, BindEachOtherActivity.class));
 				break;
 		}
 	}
