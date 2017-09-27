@@ -34,7 +34,7 @@
 
         <com.liangfeizc.avatarview.AvatarView
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="400dp"
             app:error="@{@drawable/error}"
             app:imageUrl="@{imageUrl}"
             app:onClickListener="@{activity.mClickListener}"/>

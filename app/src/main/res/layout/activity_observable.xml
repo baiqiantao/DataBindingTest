@@ -2,26 +2,31 @@
 
     <data>
 
-        <import type="com.bqt.databinding.model.PlainUser"/>
-
         <import type="android.databinding.ObservableMap"/>
 
         <import type="android.databinding.ObservableList"/>
 
         <variable
             name="user"
+            type="com.bqt.databinding.model.User"/>
+
+        <variable
+            name="observableUser"
             type="com.bqt.databinding.model.ObservableUser"/>
+
 
         <variable
             name="plainUser"
-            type="PlainUser"/>
+            type="com.bqt.databinding.model.PlainUser"/>
 
         <variable
             name="mapUser"
             type="ObservableMap&lt;String, Object>"/>
 
 
-        <variable name="userList" type="ObservableList&lt;Object>"/>
+        <variable
+            name="listUser"
+            type="ObservableList&lt;Object>"/>
     </data>
 
     <LinearLayout
@@ -30,44 +35,30 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Observable Object"/>
+            android:text="@{user.firstName}"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{@string/nameFormat(user.firstName, user.lastName)}"/>
+            android:text="@{observableUser.name}"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Observable Field"/>
+            android:text="@{plainUser.name}"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{mapUser[`name`]}"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{@string/nameFormatWithAge(plainUser.firstName, plainUser.lastName, plainUser.age)}"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="ObservableMap"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@{@string/nameFormatWithAge(mapUser[`firstName`], mapUser[`lastName`], 1 + (Integer)mapUser[`age`])}"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="ObservableList"/>
-
-
+            android:text='@{listUser[0]}'/>
 
         <Button
             android:layout_width="match_parent"

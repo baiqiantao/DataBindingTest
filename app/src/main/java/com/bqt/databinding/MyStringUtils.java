@@ -1,4 +1,4 @@
-package com.bqt.databinding.utils;
+package com.bqt.databinding;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

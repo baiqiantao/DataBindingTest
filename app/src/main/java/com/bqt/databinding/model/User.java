@@ -2,10 +2,13 @@ package com.bqt.databinding.model;
 
 public class User {
 	public String firstName;
-	private final String lastName;
+	private String lastName;
 	private String displayName;
 	private int age;
-	public static String SEX="男";
+	public static String SEX = "男";
+	
+	public User() {
+	}
 	
 	public User(String firstName, String lastName) {
 		this.firstName = firstName;

@@ -6,7 +6,7 @@
 
         <import
             alias="StringUtils"
-            type="com.bqt.databinding.utils.MyStringUtils"/>
+            type="com.bqt.databinding.MyStringUtils"/>
 
         <import type="android.view.View"/>
 

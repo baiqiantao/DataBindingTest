@@ -20,7 +20,7 @@ public class ResourceActivity extends Activity {
 		binding.setFirstName("包");
 		binding.setLastName("青天");
 		
-		binding.setBananaCount(1);
-		binding.setOrangeCount(10);
+		binding.setBananaCount(100);
+		binding.setOrangeCount(2);
 	}
 }
